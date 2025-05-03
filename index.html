@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAZI LIVE TV WEB</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: 'MedievalSharp', cursive;
+    background-color: black;
+    color: white;
+    padding-top: 70px; /* হেডারের উচ্চতার সমান জায়গা দিতে হবে যাতে কন্টেন্ট ঠিকভাবে দেখা যায় */
+}
+
+        header {
+    position: fixed; /* হেডারকে ফিক্সড অবস্থানে রাখে */
+    top: 0; /* স্ক্রীনের উপরে অবস্থান */
+    left: 0; /* বাম দিকে স্থাপন */
+    right: 0; /* ডান দিকে স্থাপন */
+    z-index: 1000; /* অন্যান্য উপাদানদের উপরে থাকবে */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid purple;
+    background-color: black; /* ব্যাকগ্রাউন্ড কালো থাকবে */
+}
+
+        .logo img {
+            height: 50px;
+        }
+
+        #play-audio-btn {
+    font-size: 40px; /* আইকনটির আকার বড় করার জন্য */
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+        .popular-content, .live-section {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            border-left: 5px solid yellowgreen;
+            padding-left: 10px;
+        }
+
+        .content-grid, .live-grid {
+            display: grid;
+            gap: 10px;
+            padding-top: 10px;
+        }
+
+        .content-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .live-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .content-box, .live-box {
+            border: 2px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content-box img, .live-box img {
+            width: 100%;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .content-box a, .live-box a {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<audio id="background-audio" loop>
+  <source src="" type="audio/mpeg">
+  আপনার ব্রাউজার অডিও প্লে করতে সমর্থ নয়।
+</audio>
+    <header>
+        <div class="logo">
+            <img src="https://www.appcreator24.com/srv/imgs/gen/3556121_splash.png" alt="TiSPORTS Logo">
+        </div>
+  <a href="javascript:void(0)" id="play-audio-btn" class="live-btn"></a>
+</div>
+    </header>
+
+    <section class="popular-content">
+        <h2>BANGLADESH TV<br>NETWORK</h2>
+        <div class="content-grid">
+            <div class="content-box">
+                <a href="https://ahil1012.github.io/GAZI-LIVE-TV-BTV/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Bangladesh_Television_Logo.svg/1200px-Bangladesh_Television_Logo.svg.png" alt="Toffee">
+                </a>
+            </div>
+            <div class="content-box">
+                <a href="https://ahil1012.github.io/gazi-live-tv.php-jamuna/" target="_blank">
+                    <img src="https://play-lh.googleusercontent.com/HB_K5ZUcWFfYBcST4buqJ_Oq3g16g4F8jbWLV3jrytGLcWks9ld0R_8ccdxDS_9gqPyP" alt="T Sports Live">
+                </a>
+            </div>
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+                </a>
+            </div>
+        </div>
+    </section>
+<div id="ad-container"></div>
+<script type="text/javascript">
+  atOptions = {
+    'key': 'b4c447cc76f7b509e001f3f8ff846607',
+    'format': 'iframe',
+    'height': 300,
+    'width': 160,
+    'params': {}
+  };
+</script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/b4c447cc76f7b509e001f3f8ff846607/invoke.js"></script>
+<script>
+document.getElementById("play-audio-btn").addEventListener("click", function() {
+    var audio = document.getElementById("background-audio");
+
+    // চেক করুন যদি অডিও চলছে তবে বন্ধ করুন, নতুবা চালু করুন
+    if (audio.paused) {
+        audio.play();  // অডিও চালু হবে
+    } else {
+        audio.pause();  // অডিও বন্ধ হবে
+    }
+});
+</script>
+</body>
+</html>
